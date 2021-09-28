@@ -1,141 +1,234 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
 	Phantom by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+  <head>
+    <title>Matthew Sulivan - Current Projects</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+      <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+  </head>
 
-<head>
-	<title>Matthew Sulivan - Current Projects</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
-</head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <div class="inner">
+          <!-- Logo -->
+          <a href="index.html" class="logo">
+            <span class="symbol"><img src="images/logo.svg" alt="" /></span
+            ><span class="title">Matthew Sullivan</span>
+          </a>
 
-<body class="is-preload">
-	<!-- Wrapper -->
-	<div id="wrapper">
+          <!-- Nav -->
+          <nav>
+            <ul>
+              <li><a href="#menu">Menu</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
-		<!-- Header -->
-		<header id="header">
-			<div class="inner">
+      <!-- Menu -->
+      <nav id="menu">
+        <h2>Menu</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="CurrProjects.html">Current Projects</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="photos.html">Photos</a></li>
+          <li><a href="MatthewSullivan_Resume.pdf">Resume</a></li>
+        </ul>
+      </nav>
 
-				<!-- Logo -->
-				<a href="index.html" class="logo">
-					<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Matthew
-						Sullivan</span>
-				</a>
+      <!-- Main -->
+      <div id="main">
+        <div class="inner">
+          <h1>Current Projects</h1>
 
-				<!-- Nav -->
-				<nav>
-					<ul>
-						<li><a href="#menu">Menu</a></li>
-					</ul>
-				</nav>
+          <!-- Text -->
+          <section>
+            <h2>PCB Design</h2>
+            <p>
+              During my time at UW, I heard many complains from my classmates
+              about the lack of PCB design courses at UW. During my senior year,
+              we had an town hall meeting to address electrical engineering
+              courses. During this meeting, many students revealed their
+              discontent with the lack of PCB design courses. EE 201 - Computer
+              Hardware Skills was produced as a result.
+            </p>
+            <p>
+              I find it neccessary to learn and print PCBs. I have experience
+              designign and etching circuit boards by hand, and I was excited to
+              finally print and populate a real PCB.
+            </p>
+            <p>
+              I could not imagine a better PCB practice circuit than my EE 233
+              project - a 3-way audio mixer. The schematic, completed in class,
+              is shown below.
+            </p>
+            \
+            <img
+              src="images/AudioSchematic.png"
+              alt="3-Channel Audio Mixer Schematic"
+            />
+            <p>
+              From the schematic, I laid the componenets out as close together
+              as I could comfortably while minimizing overlapping lines. I read
+              online that it is best to have ICs centered and passive components
+              closest to the edge. Because I am using many potentiometers as
+              tuners, I thought it would be best to keep those closest to the
+              edge to help explain how to use the system. The left-most turners
+              are volume controllers for each of the three inputs and the
+              resulting mixture. The right most tuners adjust the volume of the
+              low, middle, and high frequencies.
+            </p>
+            <div class="box alt">
+              <div class="row gtr-uniform">
+                <div class="col-4">
+                  <span class="image fit">
+					  <img src="images/AudioLayout.png" alt=""/>
+				</span>
+                </div>
+                <div class="col-4">
+                  <span class="image fit"
+                    ><img src="images/AudioTraces.png" alt=""
+                  /></span>
+                </div>
+                <div class="col-4">
+                  <span class="image fit"
+                    ><img src="images/AudioFinal.png" alt=""
+                  /></span>
+                </div>
+              </div>
+            </div>
+            <p>
+              Routing was an interesting experience that took a few tries. I
+              started with the AutoRouter, and -- while it 'worked' -- it was
+              not ideal. I started over and manually routed the ICs and
+              potentiometers before AutoRouting the passive components.
+            </p>
+            <p>
+              I am adding a bottom silk layer that says my name and the
+              project's name. And with that, they are off to printing!
+            </p>
+            <hr />
+            <h2>Embedded Systems</h2>
+            <p>
+              I enrolled in EE 474 - Embedded Systems during the Summer 2020
+              pandemic in addition to Introduction to Machine Learning and Data
+              Structures and Algorithms. I also started my job at Subway.
+              Unfortunately, the course was too much for me, and I dropped it,
+              thinking my capstone would be an in-person, embedded focused
+              project in Spring 2021.
+            </p>
+            <p>
+              Unfortunately, things did not turn out that way, and I am going
+              back to relearn the material! Fortunately, there are many
+              tutorials and resources available to learn embedded systems! I
+              will be following a tutorial by
+              <a
+                href="https://mrdrprofbolt.wordpress.com/2020/11/28/making-an-electronic-business-card-pcb-layout-fabrication-and-assembly/"
+                >Mr. Dr. Prof. Bolt</a
+              >.
+            </p>
+            <p>
+              Bolt blogs his process in designing a top-down shooter for a
+              business card. I will be designing a business card to show in
+              interviews, however, I prefer to implement Pong. I will describe
+              my processes, code, and concepts to help those who might not
+              understand Bolt's explanations.
+            </p>
+            <h3>PCB Design</h3>
+            <div class="box alt">
+              <div class="row gtr-uniform">
+                <div class="col-4">
+                  <span class="image fit"
+                    ><img src="images/CardSchematic.png" alt=""
+                  /></span>
+                </div>
+                <div class="col-4">
+                  <span class="image fit"
+                    ><img src="images/CardTraces.png" alt=""
+                  /></span>
+                </div>
+                <div class="col-4">
+                  <span class="image fit"
+                    ><img src="images/CardCopperPour.png" alt=""
+                  /></span>
+                </div>
+              </div>
+            </div>
+            <hr />
+          </section>
+        </div>
+      </div>
 
-			</div>
-		</header>
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <section>
+            <h2>Get in touch</h2>
+            <form
+              method="post"
+              action="mailto:matt.sulli@.com?subject=Matthew Sullivan - Online Portfolio"
+            >
+              <ul class="actions">
+                <li>
+                  <input type="submit" value="Email Me!" class="primary" />
+                </li>
+              </ul>
+            </form>
+          </section>
+          <section>
+            <h2>Follow</h2>
+            <ul class="icons">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/mattsul-2021/"
+                  class="icon brands style2 fa-linkedin"
+                  ><span class="label">LinkedIn</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/mattsul"
+                  class="icon brands style2 fa-github"
+                  ><span class="label">GitHub</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:matt.sulli@.com?subject=Matthew Sullivan - Online Portfolio"
+                  class="icon solid style2 fa-envelope"
+                  ><span class="label">Email</span></a
+                >
+              </li>
+            </ul>
+          </section>
+          <ul class="copyright">
+            <li>&copy; Untitled. All rights reserved</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
 
-		<!-- Menu -->
-		<nav id="menu">
-			<h2>Menu</h2>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="CurrProjects.html">Current Projects</a></li>
-				<li><a href="portfolio.html">Portfolio</a></li>
-				<li><a href="photos.html">Photos</a></li>
-				<li><a href="MatthewSullivan_Resume.pdf">Resume</a></li>
-			</ul>
-		</nav>
-
-		<!-- Main -->
-		<div id="main">
-			<div class="inner">
-				<h1>Current Projects</h1>
-
-				<!-- Text -->
-				<section>
-					<h2>PCB Design</h2>
-					<p>During my time at UW, I heard many complains from my classmates about the lack of PCB design
-						courses at UW. During my senior year, we had an town hall meeting to address electrical
-						engineering courses. During this meeting, many students revealed their discontent with the lack
-						of PCB design courses. EE 201 - Computer Hardware Skills was produced as a result.</p>
-					<p>I find it neccessary to learn and print PCBs. I have experience designign and etching circuit
-						boards by hand, and I was excited to finally print and populate a real PCB. </p>
-					<p>I could not imagine a better PCB practice circuit than my EE 233 project - a 3-way audio mixer.
-					</p>
-					<img src="images/FirstTraceDesign.png" alt="First Trace Design" />
-					<p>This is my first trace design using Eagle CAD. The potentiometers on the left are to adjust the
-						volume of the three input songs. The bottom and right potentiometers are for adjusting the
-						overall volume and frequency volume (high, medium, low).</p>
-					<img src="images/CopperPour.png" alt="Bad Copper Pour" />
-					<p>Routing was an interesting experience that took a few tries. I started with the AutoRouter, and
-						-- while it 'worked' -- it was not ideal. I started over and manually routed the ICs and
-						potentiometers before AutoRouting the passive components.</p>
-					<img src="images/BottomSilkLayer.png" alt="Bottom Silk Layer" />
-					<p>I am adding a bottom silk layer that says my name, date, and the project's name. And with that,
-						they are off to printing!</p>
-					<hr />
-					<h2>Embedded Systems</h2>
-					<p>I enrolled in EE 474 - Embedded Systems during the Summer 2020 pandemic in addition to
-						Introduction to Machine Learning and Data Structures and Algorithms. I also started my job at
-						Subway. Unfortunately, the course was too much for me, and I dropped it, thinking my capstone
-						would be an in-person, embedded focused project in Spring 2021.</p>
-					<p>Unfortunately, things did not turn out that way, and I am going back to relearn the material!
-						Fortunately, there are many tutorials and resources available to learn embedded systems! I will
-						be following a tutorial by <a
-							href="https://mrdrprofbolt.wordpress.com/2020/11/28/making-an-electronic-business-card-pcb-layout-fabrication-and-assembly/">Mr.
-							Dr. Prof. Bolt</a>. </p>
-					<p>Bolt blogs his process in designing a top-down shooter for a business card. I will be designing a
-						business card to show in interviews, however, I prefer to implement Pong. I will describe my
-						processes, code, and concepts to help those who might not understand Bolt's explanations.</p>
-					<hr />
-				</section>
-			</div>
-		</div>
-
-		<!-- Footer -->
-		<footer id="footer">
-			<div class="inner">
-				<section>
-					<h2>Get in touch</h2>
-					<form method="post" action="mailto:matt.sulli@.com?subject=Matthew Sullivan - Online Portfolio">
-						<ul class="actions">
-							<li><input type="submit" value="Email Me!" class="primary" /></li>
-						</ul>
-					</form>
-				</section>
-				<section>
-					<h2>Follow</h2>
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/mattsul-2021/"
-								class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/mattsul" class="icon brands style2 fa-github"><span
-									class="label">GitHub</span></a></li>
-						<li><a href="mailto:matt.sulli@.com?subject=Matthew Sullivan - Online Portfolio"
-								class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-				</section>
-				<ul class="copyright">
-					<li>&copy; Untitled. All rights reserved</li>
-					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</div>
-		</footer>
-
-	</div>
-
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-
-</body>
-
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
