@@ -46,7 +46,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="CurrProjects.html">Current Projects</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="photos.html">Photos</a></li>
+          <li><a href="photos.html">About Me</a></li>
           <li><a href="MatthewSullivan_Resume.pdf">Resume</a></li>
         </ul>
       </nav>
@@ -56,9 +56,17 @@
         <div class="inner">
           <h1>Current Projects</h1>
 
+          <section>
+            <ul style="list-style: none">
+              <li><a href="#AudioMixer">Learning PCB Design</a></li>
+              <li><a href="#BusinessCard">Business Card</a></li>
+              <li><a href="#MechanicalKeyboard">Mechanical Keyboard</a></li>
+            </ul>
+          </section>
+
           <!-- Text -->
           <section>
-            <h2>PCB Design</h2>
+            <h2 id="Audio Mixer">Learning PCB Design</h2>
             <p>
               During my time at UW, I heard many complains from my classmates
               about the lack of PCB design courses at UW. During my senior year,
@@ -79,6 +87,7 @@
             </p>
             \
             <img
+              class="image fit"
               src="images/AudioSchematic.png"
               alt="3-Channel Audio Mixer Schematic"
             />
@@ -97,18 +106,24 @@
               <div class="row gtr-uniform">
                 <div class="col-4">
                   <span class="image fit">
-					  <img src="images/AudioLayout.png" alt=""/>
-				</span>
+                    <a href="images/AudioLayout.png" target="_blank"
+                      ><img src="images/AudioLayout.png" alt=""
+                    /></a>
+                  </span>
                 </div>
                 <div class="col-4">
-                  <span class="image fit"
-                    ><img src="images/AudioTraces.png" alt=""
-                  /></span>
+                  <span class="image fit">
+                    <a href="images/AudioTraces.png" target="_blank"
+                      ><img src="images/AudioTraces.png" alt=""
+                    /></a>
+                  </span>
                 </div>
                 <div class="col-4">
-                  <span class="image fit"
-                    ><img src="images/AudioFinal.png" alt=""
-                  /></span>
+                  <span class="image fit">
+                    <a href="images/AudioFinal.png" target="_blank"
+                      ><img src="images/AudioFinal.png" alt=""
+                    /></a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -123,7 +138,14 @@
               project's name. And with that, they are off to printing!
             </p>
             <hr />
-            <h2>Embedded Systems</h2>
+            <h2 id="BusinessCard">Embedded Business Card</h2>
+            <h3 style="color: brown">
+              Sep 28: PCBs Ordered and Components Shipped!
+            </h3>
+            <h3 style="color: brown">
+              Oct 12: Components backordered until December 8th, 2021
+              <span class="far fa-frown fa-2x" />
+            </h3>
             <p>
               I enrolled in EE 474 - Embedded Systems during the Summer 2020
               pandemic in addition to Introduction to Machine Learning and Data
@@ -153,22 +175,42 @@
             <div class="box alt">
               <div class="row gtr-uniform">
                 <div class="col-4">
-                  <span class="image fit"
-                    ><img src="images/CardSchematic.png" alt=""
-                  /></span>
+                  <span class="image fit">
+                    <a href="images/CardSchematic.png" target="_blank"
+                      ><img src="images/CardSchematic.png" alt=""
+                    /></a>
+                  </span>
                 </div>
                 <div class="col-4">
-                  <span class="image fit"
-                    ><img src="images/CardTraces.png" alt=""
-                  /></span>
+                  <span class="image fit">
+                    <a href="images/CardTraces.png" target="_blank"
+                      ><img src="images/CardTraces.png" alt=""
+                    /></a>
+                  </span>
                 </div>
                 <div class="col-4">
-                  <span class="image fit"
-                    ><img src="images/CardCopperPour.png" alt=""
-                  /></span>
+                  <span class="image fit">
+                    <a href="images/CardCopperPour.png" target="_blank"
+                      ><img src="images/CardCopperPour.png" alt=""
+                    /></a>
+                  </span>
                 </div>
               </div>
             </div>
+            <hr />
+            <hr />
+            <h2 id="MechanicalKeyboard">Mechanical Keyboard</h2>
+            <p>
+              Due to the long wait for my business card componenets and PCBS, I
+              decided to continued on with another project: designing a
+              mechanical keyboard from scratch.
+            </p>
+            <p>
+              While I am not too interested in mechanical keyboards, I am
+              interested in learning USB protocols and designing products. I
+              found this to be a great example project to further develop my
+              skills in product design.
+            </p>
             <hr />
           </section>
         </div>
