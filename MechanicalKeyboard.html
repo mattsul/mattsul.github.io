@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Matthew Sullivan - Mechanical Keyboard</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <div class="inner">
+          <!-- Logo -->
+          <a href="index.html" class="logo">
+            <span class="symbol"><img src="images/M_Island.png" alt="" /></span
+            ><span class="title">Matthew Sullivan</span>
+          </a>
+
+          <!-- Nav -->
+          <nav>
+            <ul>
+              <li><a href="#menu">Menu</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <h2>Menu</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="CurrProjects.html">Current Projects</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="photos.html">About Me</a></li>
+          <li><a href="MatthewSullivan_Resume.pdf">Resume</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main -->
+      <div id="main">
+        <div class="inner">
+          <!-- Title and Navigation-->
+          <span class="image main"><img src="images/BackRender.png" alt="" /></span>
+          <h1>Mechanical Keyboard from Scratch</h1>
+          <section>
+            <h2>Table of Contents</h2>
+            <ol style="font-size: 22px">
+              <li><a href="#Introduction">Introduction</a></li>
+              <li><a href="#Background">Background</a></li>
+              <li><a href="#BoM">Bill of Materials</a></li>
+              <li><a href="#PCB">PCB Design</a></li>
+              <li><a href="#Firmware">Firmware</a></li>
+              <li><a href="#Analysis">Analysis</a></li>
+              <li><a href="#References">References</a></li>
+            </ol>
+          </section>
+
+          <!-- Text -->
+          <section>
+            <h2 id="Introduction">Introduction</h2>
+            <p>
+              During my senior year of university, I spent many hours everyday
+              sitting at my laptop typing away. My poor laptop, eroding from
+              exam and presenting stress-sweat, needed a new keyboard. My
+              friends endlessly discussed how pinnacle their RGB mechanical
+              keyboard was in their daily life. When my birthday came around, I
+              received a RGB mechanical keyboard from my generous friend, Peoni
+              Cha.
+            </p>
+            <p>
+              As I learned more about the gift I received, I discovered that
+              mechanical keyboards are a modern luxury, often designed with such
+              specific weighing and keycap sound. I am more interested in room
+              lighting and music sound than keyboards, however, I found this to
+              be a perfect example to expand my PCB and embedded skills!
+            </p>
+            <hr />
+            <h2 id="Background">Background</h2>
+            <h3>How Keyboards Work</h3>
+            <p>
+              The keyboard I am designing will work through a key scan matrix. I
+              found these two articles incredibly helpful:
+            </br>
+              <a
+                style="font-weight: bold"
+                href="http://blog.komar.be/how-to-make-a-keyboard-the-matrix/"
+                >1:The Matrix</a
+              >
+            </br>
+              <a
+                style="font-weight: bold"
+                href="https://beta.docs.qmk.fm/developing-qmk/for-a-deeper-understanding/how_a_matrix_works"
+                >2: How a Matrix Works</a
+              >
+             </br>
+
+            Generally, a switch acts as a physically detached wire. The user physically connects the wires upon pressing down. When you have N many buttons and M any GPIO pins where N > M, a switch matrix can be used to locate which switch is pressed down by locating the X and Y coordinates of the activated switch. 
+            </p>
+            <h3>The Schematic</h3>
+            <div class="row gtr-uniform">
+              <div class="col-12"><span class="image fit"><img src="images/KeyboardSchematic-1.png" alt="" /></span></div>
+            </div>
+            <p>I broke the keyboard down into major and minor subcomponenets, shown below: </p>
+            <ol>
+              <li>Switch Matrix</li>
+              <li>Underglow LEDs</li>
+              <li>USB</li>
+              <ul>
+                <li>Power Transfer</li>
+                <li>Data Connection</li>
+              </ul>
+              <li>MCU Ports</li>
+              <ul>
+                <li>GPIO</li>
+                <li>Power Pins</li>
+                <li>Communication Pins</li>
+                <li>Booting Pins</li>
+              </ul>
+            </ol>
+            <hr />
+            <h2 id="BoM">Bill of Materials</h2>
+            <div class="table-wrapper">
+              <table class="alt">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Capcitor</td>
+                    <td>100nF</td>
+                    <td>9</td>
+                  </tr>
+                  <tr>
+                    <td>Resistor</td>
+                    <td>10k &Omega;</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>Resistor</td>
+                    <td>500 &Omega;</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>MCU</td>
+                    <td>STM32F072CBT6</td>
+                    <td>1</td>
+                  </tr>
+                  </tr>
+                </tbody>
+                <!-- <tfoot>
+                  <tr>
+                    <td colspan="2"></td>
+                    <td>100.00</td>
+                  </tr>
+                </tfoot> -->
+              </table>
+            </div>
+            <hr />
+            <h2 id="PCB">PCB Design</h2>
+            <div class="box alt">
+              <div class="row gtr-uniform">
+                <div class="col-4"><span class="image fit"><img src="images/FrontComponentPCB.png" alt="" /></span></div>
+                <div class="col-4"><span class="image fit"><img src="images/FrontComponents.png" alt="" /></span></div>
+                <div class="col-4"><span class="image fit"><img src="images/FrontTraces.png" alt="" /></span></div>
+                <div class="col-4"><span class="image fit"><img src="images/FrontRender.png" alt="" /></span></div>
+                <div class="col-4"><span class="image fit"><img src="images/BackComponentPCB.png" alt="" /></span></div>
+                <div class="col-4"><span class="image fit"><img src="images/BackComponents.png" alt="" /></span></div>
+                <div class="col-4"><span class="image fit"><img src="images/BackTraces.png" alt="" /></span></div>
+                <div class="col-4"><span class="image fit"><img src="images/BackRender.png" alt="" /></span></div>
+              </div>
+            </div>
+            <hr />
+            <h2 id="Firmware">Firmware</h2>
+            <hr />
+            <h2 id="Analysis">Analysis</h2>
+            <hr />
+            <h2 id="References">References</h2>
+          </section>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <section>
+            <h2>Get in touch</h2>
+            <form
+              method="post"
+              action="mailto:matt.sulli@.com?subject=Matthew Sullivan - Online Portfolio"
+            >
+              <ul class="actions">
+                <li>
+                  <input type="submit" value="Email Me!" class="primary" />
+                </li>
+              </ul>
+            </form>
+          </section>
+          <section>
+            <h2>Follow</h2>
+            <ul class="icons">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/mattsul-2021/"
+                  class="icon brands style2 fa-linkedin"
+                  ><span class="label">LinkedIn</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/mattsul"
+                  class="icon brands style2 fa-github"
+                  ><span class="label">GitHub</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:matt.sulli@.com?subject=Matthew Sullivan - Online Portfolio"
+                  class="icon solid style2 fa-envelope"
+                  ><span class="label">Email</span></a
+                >
+              </li>
+            </ul>
+          </section>
+          <ul class="copyright">
+            <li>&copy; Untitled. All rights reserved</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
